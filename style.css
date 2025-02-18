@@ -60,6 +60,7 @@ body {
     padding-left: 10px;
     font-size: 36px;
     color: #fc4300;
+    cursor: pointer;
   }
 
   .nav-items {
@@ -154,6 +155,7 @@ body {
     font-size: 30px;
     display: none;
     color: #fc4300;
+    cursor: pointer;
   }
 
   .nav-items .fa-bars.show {
@@ -175,19 +177,18 @@ body {
     width: calc(100% - 250px);
     height: 100vh;
     background-color: #000;
-    z-index: 5;
+    z-index: -5;
     opacity: 0;
     transition: 0.3s ease-in-out;
   }
 
   .effect.show {
+    z-index: 1;
     opacity: 0.6;
   }
 
-  .grid-container {
-    position: relative;
+  .Container_main {
     margin-top: 30%;
-    z-index: -1;
   }
 
   .products {
@@ -196,8 +197,19 @@ body {
     gap: 10px;
     width: 100%;
     height: 100%;
-    border-bottom: solid 1px #ddd;
     justify-content: center;
+    cursor: pointer;
+  }
+
+  .products2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background-color: #fc4300;
+    height: 500px;
   }
 
   h1 {
@@ -212,18 +224,126 @@ body {
     margin-bottom: 130px;
     margin-left: 5px;
     margin-right: 5px;
+    position: relative;
   }
 
-  .descricao {
+  .product_new {
+    border-radius: 5px;
+    height: 150px;
+    max-width: 200px;
+    margin-bottom: 130px;
+    margin-top: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
+    position: relative;
+  }
+
+  .descricao1 {
+    position: relative;
     font-size: 18px;
-    text-align: center;
     margin-top: 150px;
-    transition: 0.5s ease;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .descricao1.show {
+    opacity: 1;
+  }
+
+  .descricao2 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .descricao2.show {
+    opacity: 1;
+  }
+
+  .descricao3 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .descricao3.show {
+    opacity: 1;
+  }
+
+  .descricao4 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .descricao4.show {
+    opacity: 1;
+  }
+
+  .descricao5 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .descricao5.show {
+    opacity: 1;
+  }
+
+  .descricao6 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  .descricao6.show {
+    opacity: 1;
+  }
+
+  .descricao7 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .descricao8 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .descricao9 {
+    position: relative;
+    font-size: 18px;
+    margin-top: 150px;
+    text-align: center;
+    transition: opacity 0.2s ease-in-out;
   }
 
   .product1 {
     background-image: url(img/rice.jpg);
     background-position: center;
+    background-color: lightgray;
     background-size: cover;
   }
 
@@ -257,19 +377,39 @@ body {
     background-size: cover;
   }
 
+  .product7 {
+    background-image: url(img/notebooks_categgory.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .product8 {
+    background-image: url(img/phones.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .product9 {
+    position: absolute;
+    background-image: url(img/desk.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-left: 23%;
+    width: 100%;
+    margin-top: 80%;
+  }
+
   .btn {
     padding: 5px;
     border-radius: 10px;
     border: none;
     background-color: #ddd;
   }
-}
 
-@media (min-width: 550px) {
-  .grid-container {
-    position: relative;
-    margin-top: 15%;
-    z-index: -1;
+  .tech {
+    position: absolute;
+    margin-top: 5%;
+    left: 30%;
   }
 }
 
@@ -314,11 +454,8 @@ body {
     z-index: 3;
   }
 
-  .grid-container {
-    position: relative;
-    width: 100%;
+  .Container_main {
     margin-top: 5%;
-    z-index: -1;
   }
 
   .products {
@@ -327,6 +464,7 @@ body {
     gap: 10px;
     width: 100%;
     height: 100%;
+    padding-top: 30px;
   }
 
   .product {
@@ -338,11 +476,15 @@ body {
     margin-right: 5px;
   }
 
-  .descricao {
+  .descricao1 {
     font-size: 18px;
     text-align: center;
-    margin-top: 150px;
     transition: 0.5s ease;
+    transition: 0.3s ease;
+  }
+
+  .descricao1.show {
+    opacity: 1;
   }
 
   .product1 {
@@ -386,5 +528,47 @@ body {
     border-radius: 10px;
     border: none;
     background-color: #ddd;
+  }
+
+  .products2 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px));
+    gap: 10px;
+    width: 100%;
+    height: 300px;
+    padding-top: 30px;
+    padding-left: 15%;
+    background-color: #fc4300;
+  }
+
+  .product7 {
+    background-image: url(img/notebooks_categgory.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .product8 {
+    background-image: url(img/phones.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .product9 {
+    position: relative;
+    background-image: url(img/desk.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .product_new {
+    padding: 0;
+    margin-top: 60px;
+    margin-left: 0;
+  }
+
+  .tech {
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 15%;
   }
 }
